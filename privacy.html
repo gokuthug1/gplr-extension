@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | GokuPlr HTML5 Video Player</title>
+    <meta name="description" content="Privacy Policy for the GokuPlr HTML5 Video Player Chrome Extension.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans:['Inter', 'sans-serif'],
+                        mono:['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+                    },
+                    colors: {
+                        primary: '#0A84FF',
+                        bgDark: '#0a0a0c',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: theme('colors.bgDark');
+            color: white;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #ffffff, #a8c7fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Custom styling for standard HTML elements within the policy */
+        .policy-content p { margin-bottom: 1.5rem; color: #9ca3af; line-height: 1.75; }
+        .policy-content ul { margin-bottom: 1.5rem; padding-left: 1.5rem; color: #9ca3af; list-style-type: disc; }
+        .policy-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .policy-content h2 { font-size: 1.5rem; font-weight: 600; color: #ffffff; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem; }
+        .policy-content strong { color: #e5e7eb; font-weight: 600; }
+        .policy-content code { background: rgba(255,255,255,0.1); color: #93c5fd; padding: 0.2rem 0.4rem; border-radius: 0.25rem; font-family: theme('fontFamily.mono'); font-size: 0.875em; }
+        .highlight-emphasis { color: #f87171; font-weight: 600; } /* Tailwind red-400 */
+    </style>
+</head>
+<body class="antialiased selection:bg-primary selection:text-white flex flex-col min-h-screen relative">
+
+    <!-- Ambient Background Globs -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-primary/10 rounded-full mix-blend-screen filter blur-[100px] opacity-70"></div>
+        <div class="absolute bottom-[-20%] right-[-5%] w-[30rem] h-[30rem] bg-purple-600/10 rounded-full mix-blend-screen filter blur-[120px] opacity-70"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="w-full z-50 glass border-b-0 border-white/5 border-b">
+        <div class="max-w-4xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-blue-700 flex items-center justify-center shadow-lg shadow-primary/30">
+                    <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5V19L19 12L8 5Z"></path></svg>
+                </div>
+                <span class="text-xl font-bold tracking-tight">GokuPlr</span>
+            </a>
+            <div>
+                <a href="index.html" class="text-sm font-medium text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 md:py-20">
+        
+        <div class="glass p-8 md:p-12 rounded-3xl shadow-2xl relative overflow-hidden">
+            <!-- Decorative top border -->
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-purple-500 to-primary"></div>
+
+            <header class="text-center mb-12">
+                <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-gradient">Privacy Policy</h1>
+                <p class="text-sm font-medium text-gray-400 bg-white/5 inline-block px-4 py-1.5 rounded-full border border-white/10">
+                    Last Updated: February 28, 2026
+                </p>
+            </header>
+
+            <div class="policy-content">
+                <section id="introduction">
+                    <p>This Privacy Policy describes how "GokuPlr HTML5 Video Player" (the "Extension") handles information when you use it. Your privacy is important to us, and this policy aims to be transparent about our practices regarding local data processing.</p>
+                </section>
+
+                <section id="information-access">
+                    <h2>1. Information We Access (Not Collected or Transmitted)</h2>
+                    <p>To provide enhanced video playback controls, the Extension needs to interact with specific elements on the web pages you visit. Specifically, the Extension interacts with:</p>
+                    <ul>
+                        <li><strong>HTML5 Video Elements:</strong> The Extension detects <code>&lt;video&gt;</code> tags on web pages to inject the custom player interface.</li>
+                        <li><strong>Media Stream URLs:</strong> The Extension identifies URLs for video streams (such as <code>.mp4</code>, <code>.m3u8</code>, or <code>.ts</code> segments) to enable features like "Audio Boost" and "Download."</li>
+                        <li><strong>Page Title:</strong> The Extension reads the <code>document.title</code> to suggest a filename when you choose to download a video.</li>
+                    </ul>
+                    <p>This information is processed <span class="highlight-emphasis">SOLELY</span> within your browser's memory. The Extension does not transmit this data to any external server.</p>
+                </section>
+
+                <section id="how-we-use-information">
+                    <h2>2. How We Use Information</h2>
+                    <p>The data processed by the Extension is used exclusively for the following local functionalities:</p>
+                    <ul>
+                        <li><strong>Interface Injection:</strong> Replacing the native browser video controls with the GokuPlr custom interface.</li>
+                        <li><strong>Audio Processing:</strong> Using the Web Audio API to increase volume beyond 100% (Audio Booster).</li>
+                        <li><strong>Media Extraction:</strong> Assembling media segments locally to allow you to save a video file to your computer's hard drive upon your explicit request.</li>
+                        <li><strong>Preferences:</strong> Saving your customization settings (theme color, volume, speed) to your browser's local storage.</li>
+                    </ul>
+                    <p>The Extension <span class="highlight-emphasis">DOES NOT</span>:</p>
+                    <ul>
+                        <li>Transmit video viewing history to us or any third party.</li>
+                        <li>Collect, store, or transmit any Personally Identifiable Information (PII).</li>
+                        <li>Analyze your browsing habits for advertising purposes.</li>
+                    </ul>
+                </section>
+
+                <section id="permissions">
+                    <h2>3. Permissions Usage</h2>
+                    <p>The Extension requires specific permissions in Google Chrome to function. Here is why each permission is necessary:</p>
+                    <ul>
+                        <li>
+                            <strong><code>host_permissions</code> (&lt;all_urls&gt;)</strong>: This permission is required to detect and enhance HTML5 video players on <em>any</em> website you visit (e.g., social media, news sites, educational platforms). Without this, the player would not appear.
+                        </li>
+                        <li>
+                            <strong><code>webRequest</code></strong>: This permission is used internally to intercept background media stream URLs. This allows the Extension to correctly identify the highest quality video source for playback and extraction without relying on the website's visual interface.
+                        </li>
+                        <li>
+                            <strong><code>storage</code></strong>: This permission is used to save your personal preferences (such as your preferred playback speed, volume level, and theme color) locally on your device.
+                        </li>
+                        <li>
+                            <strong><code>downloads</code></strong>: This permission is required to allow the Extension to save media files to your computer's "Downloads" folder when you click the download button.
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="youtube-compliance">
+                    <h2>4. YouTube & Google Video Policy Compliance</h2>
+                    <div class="bg-red-500/10 border border-red-500/20 p-5 rounded-xl my-6">
+                        <p class="!mb-3 !text-red-200">In strict compliance with the Chrome Web Store Developer Program Policies regarding the downloading of YouTube content:</p>
+                        <p class="!mb-4"><span class="highlight-emphasis">GokuPlr explicitly disables all media downloading functionality on YouTube.com and Google Video domains.</span></p>
+                        <ul class="!mb-0 !text-red-200/80">
+                            <li>The download button is programmatically hidden and disabled on these domains.</li>
+                            <li>Network interception for the purpose of downloading is disabled for YouTube URLs.</li>
+                            <li>Attempts to trigger a download on these domains will be blocked by the Extension's internal logic.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="data-security">
+                    <h2>5. Data Security</h2>
+                    <p>Since no user data is collected or transmitted to external servers by the Extension, the security of your information relies on the security measures of your own browser and computer system. The Extension operates entirely within the secure, sandboxed environment provided by Google Chrome.</p>
+                </section>
+
+                <section id="policy-changes">
+                    <h2>6. Changes to This Privacy Policy</h2>
+                    <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top.</p>
+                    <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+                </section>
+
+                <section id="contact-us">
+                    <h2>7. Contact Us</h2>
+                    <p>If you have any questions or concerns about this Privacy Policy or the Extension's practices, please feel free to contact us via the support tab on the Chrome Web Store listing.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 bg-black/50 backdrop-blur-md py-8 mt-auto">
+        <div class="max-w-4xl mx-auto px-6 flex flex-col items-center gap-4">
+            <div class="flex items-center gap-6 text-sm text-gray-400">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <a href="privacy.html" class="hover:text-white transition-colors text-white">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Chrome Web Store</a>
+            </div>
+            <p class="text-gray-600 text-sm">© <span id="currentYear">2026</span> GokuPlr HTML5 Video Player. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYearSpan = document.getElementById('currentYear');
+            if (currentYearSpan) {
+                currentYearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+
+</body>
+</html>
