@@ -30,10 +30,6 @@
         }
     </script>
     <style>
-        body {
-            background-color: theme('colors.bgDark');
-            color: white;
-        }
         .glass {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(16px);
@@ -55,7 +51,7 @@
         .highlight-emphasis { color: #f87171; font-weight: 600; } /* Tailwind red-400 */
     </style>
 </head>
-<body class="antialiased selection:bg-primary selection:text-white flex flex-col min-h-screen relative">
+<body class="bg-bgDark text-white antialiased selection:bg-primary selection:text-white flex flex-col min-h-screen relative">
 
     <!-- Ambient Background Globs -->
     <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
